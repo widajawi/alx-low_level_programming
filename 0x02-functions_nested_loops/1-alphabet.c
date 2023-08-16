@@ -1,5 +1,5 @@
 #include "main.h"
-#include "studio.h"
+
 /**
  * print_alphabet - Entry point
  * Return:0
