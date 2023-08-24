@@ -1,42 +1,24 @@
 #include "main.h"
 /**
- * print_number -Prints an integer
- *
- * @n: input integer
- *
- * Return: void
- */
-
+  * print_number - Prints any integer with putchar
+  * @n: Number to prints
+  *
+  * Return: Nothing
+  */
 void print_number(int n)
 {
-
-	int len, index;
-
-	len = 1000000000;
+	unsigned int x;
 
 	if (n < 0)
 	{
 		_putchar('-');
+		n *= -1;
+	}
 
-	if (n == -2147483648)
-	{
-		index = 1;
-		n += 1;
-	}
-	n = -n;
-	}
-	while (len != 1)
-	{
-		if (n >= len)
-			_putchar((n / len) % 10 + '0');
-		len /= 10;
-	}
-	if (index == 1)
-	{
-		_putchar(((n % 10) + 1) + '0');
-	}
-	else
-	{
-		_putchar(n % 10 + '0');
-	}
+	x = n;
+
+	if (x / 10)
+		print_number(x / 10);
+
+	_putchar(x % 10 + '0');
 }
