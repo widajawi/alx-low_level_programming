@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 /**
  *  * main - entry point
@@ -10,7 +10,7 @@
  *       * @argv: pointer that contains the arrays of the arguments
  *        *
  *         * Return: 0
- *          */
+ */
 int main(int argc, char *argv[] __attribute__((unused)))
 {
 		int i = argc - 1;
